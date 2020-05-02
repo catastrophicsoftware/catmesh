@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk update && apk install python3&& pip3 install hvac boto3 && mkdir /app
+RUN apk update && apk add python3 && pip3 install hvac boto3 && mkdir /app
 COPY *.py /app/
 
 ENV CATMESH_HOSTED_ZONE_ID none
