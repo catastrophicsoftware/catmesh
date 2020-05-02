@@ -14,7 +14,7 @@ clusterClients = {}
 clusterServers = {}
 
 ak,sk = requestAWSCredentialsV2('catmesh')
-time.sleep(5) #required for aws to fully commit creds
+time.sleep(10) #required for aws to fully commit creds
 
 ec2     = boto3.client('ec2', aws_access_key_id=ak, aws_secret_access_key=sk, region_name='us-west-2')
 route53 = boto3.client('route53', aws_access_key_id=ak, aws_secret_access_key=sk, region_name='us-west-2')
